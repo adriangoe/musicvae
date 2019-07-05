@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="favicon.png">
+  <title>VAE IGA Music Machine</title>
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Source+Sans+Pro" rel="stylesheet">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./build/css/style.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@magenta/music@1.8.0"></script>
+  <script src="./build/js/vae.min.js"></script>
+</head>
+
+<body>
+  <button class="trigger button">Info</button>
+  <div class="modal">
+      <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>Exploring the musicVAE space with an Interactive Genetic Algorithm</h2>
+          <p>This project uses the <a href="https://magenta.tensorflow.org/music-vae" target="_blank">musicVAE</a> neural network provided by Google through <a href="https://github.com/tensorflow/magenta-js" target="_blank">magenta.js</a> to generate random sounds. An interactive genetic alogrithm is used to explore the latent sound space.</p>
+          <p>To do so, 12 random vectors are sampled in the 256-dimensional latent space and we can only move along these vectors. This dramatically reduces the search space but also limits the possible outcomes, but makes the use of an IGA much more feasible. The IGA is driven by manual user feedback.</p>
+          <p>The tool samples six random points in this 12-dimensional space and decodes their latent represenation into a 4-bar, chord-conditioned, midi sequence. You can then provide feedback on the sound quality by moving your cursor left/right on the screen. A click sends the "fitness" to the algorithm and triggers the next sound. After all six sounds have played, new sounds are prepared based on the fitness of observed sounds through crossover and mutation.</p>
+          <p>Developed by <a href="adriangoe.com" target="_blank">Adrian Goedeckemeyer</a> in June 2019.</p>
+          <p>Thanks to the Magenta team and Dr. Eric Bonabeau for inspiration.</p>
+      </div>
+  </div>
+
+  <h1 id="title">VAE IGA Music Machine</h1>
+  <div id="spinner">
+    <img src="static/loader.gif" width="75px" height="75px">
+  </div>
+  <div id="warning">Please be patient, set-up might take a minute.</div>
+  <form id="music-controls" class="music-controls">
+    <input id="play-btn" type="button" class="small button" value="Let's Start">
+  </form>
+  <div id="progress">
+    <p>Rate Fitness by clicking between left (low) and right (high).</p>
+    <p>Generation <span id="gen">X</span>, Candidate <span id="cand">X</span></p>
+  </div>
+  <canvas id="canvas"></canvas>
+</body>
+
+</html>

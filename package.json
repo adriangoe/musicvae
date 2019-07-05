@@ -1,0 +1,39 @@
+{
+  "name": "Musicvae",
+  "version": "1.0.1",
+  "description": "Generating random music with Interactive Feedback",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.6",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^4.0.2",
+    "gulp-prettyerror": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "node-sass": "^4.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adriangoe/musicvae.git"
+  },
+  "keywords": [
+    "web-audio",
+    "css"
+  ],
+  "author": "Adrian Goedeckemeer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adriangoe/musicvae/issues"
+  },
+  "homepage": "https://music.adriangoe.com"
+}

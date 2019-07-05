@@ -1,0 +1,6 @@
+.DS_STORE
+*.pyc
+node_modules/
+package-lock.json
+static/checkpoint/
+build/

@@ -1,0 +1,10 @@
+{
+	"name": "musicvae",
+    "version": 2,
+    "builds": [
+	    { "src": "index.html", "use": "@now/static" },
+	    { "src": "static/**", "use": "@now/static" },
+	    { "src": "build/**", "use": "@now/static" },
+	    { "src": "favicon*", "use": "@now/static" }
+	 ]
+}
